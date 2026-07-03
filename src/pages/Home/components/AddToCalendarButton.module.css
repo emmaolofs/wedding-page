@@ -1,0 +1,14 @@
+.button {
+  border-color: var(--mantine-color-moss-5);
+  color: var(--mantine-color-moss-8);
+  background: transparent;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover {
+  background: rgba(61, 76, 51, 0.06);
+  border-color: var(--mantine-color-moss-7);
+  color: var(--mantine-color-moss-8);
+}

@@ -1,0 +1,35 @@
+.root {
+  background: rgba(243, 241, 236, 0.9);
+  border: 1px solid rgba(95, 88, 83, 0.18);
+  padding: 4px;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(61, 76, 51, 0.06);
+}
+
+.indicator {
+  background: var(--mantine-color-moss-8);
+  border-radius: 999px;
+  box-shadow: 0 2px 12px rgba(61, 76, 51, 0.14);
+}
+
+.label {
+  color: var(--mantine-color-moss-8);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  padding-inline: 1.1rem;
+  min-width: 3rem;
+  transition: color 0.25s ease;
+}
+
+.label[data-active] {
+  color: var(--mantine-color-linen-0);
+}
+
+.label:not([data-disabled]):hover {
+  color: var(--mantine-color-moss-7);
+}
+
+.label[data-active]:hover {
+  color: var(--mantine-color-linen-0);
+}

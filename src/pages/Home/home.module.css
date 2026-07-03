@@ -1,0 +1,342 @@
+.page {
+  position: relative;
+  overflow-x: hidden;
+  background: var(--mantine-color-linen-0);
+}
+
+.langSwitcher {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 100;
+  padding: 0.2rem;
+  border-radius: 999px;
+  background: rgba(243, 241, 236, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(95, 88, 83, 0.12);
+  box-shadow: 0 6px 24px rgba(61, 76, 51, 0.08);
+}
+
+.infoSection {
+  position: relative;
+  padding: 0 0 5rem;
+  z-index: 2;
+  background: var(--mantine-color-linen-0);
+}
+
+.infoCardsOverlap {
+  position: relative;
+  z-index: 5;
+  transform: translateY(clamp(-2rem, -5vh, -1rem));
+  margin-bottom: clamp(-2rem, -5vh, -1rem);
+}
+
+@media (min-width: 48em) {
+  .infoCardsOverlap {
+    transform: translateY(clamp(-4.5rem, -10vh, -3rem));
+    margin-bottom: clamp(-4.5rem, -10vh, -3rem);
+  }
+}
+
+.infoCard {
+  height: 100%;
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid rgba(95, 88, 83, 0.12);
+  background: rgba(252, 251, 248, 0.96);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 60px rgba(61, 76, 51, 0.08);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoCardInner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.infoCardHeading {
+  font-family: var(--mantine-font-family-headings);
+  font-weight: 500;
+  color: var(--mantine-color-moss-8);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.infoCardSubtext {
+  color: var(--mantine-color-dimmed);
+  text-align: center;
+  line-height: 1.7;
+  max-width: 20rem;
+}
+
+@media (min-width: 48em) {
+  .infoCard {
+    padding: 2.5rem;
+  }
+
+  .infoCardSide {
+    padding: 2.5rem 2rem;
+  }
+
+  .infoCardCountdown {
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0 4rem;
+  background: var(--mantine-color-linen-1);
+}
+
+@media (max-width: 47.99em) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 6.75rem;
+    padding-bottom: 6.5rem;
+  }
+
+  .heroImageCol {
+    padding-top: 0.75rem;
+  }
+
+  .heroTextCol {
+    margin-top: 0;
+  }
+
+  .heroIntro {
+    margin-top: 0.5rem;
+    margin-inline: auto;
+  }
+
+  .heroEyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .heroCalendarAction {
+    margin-bottom: 2rem;
+  }
+}
+
+.heroIntro {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.heroEyebrow {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--mantine-color-moss-7);
+  margin-bottom: var(--mantine-spacing-md);
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 62em) {
+  .heroEyebrow {
+    text-align: left;
+  }
+}
+
+.heroDatePrimary {
+  font-family: var(--mantine-font-family-headings);
+  font-size: clamp(1.45rem, 3.2vw, 1.85rem);
+  font-weight: 500;
+  color: var(--mantine-color-moss-8);
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+.heroDateDetail {
+  font-family: var(--mantine-font-family-headings);
+  font-size: clamp(1.1rem, 2.4vw, 1.25rem);
+  font-weight: 500;
+  color: var(--mantine-color-moss-8);
+  line-height: 1.45;
+}
+
+.heroDateDetailMuted {
+  font-family: var(--mantine-font-family-headings);
+  font-size: clamp(1.1rem, 2.4vw, 1.25rem);
+  font-weight: 500;
+  color: var(--mantine-color-moss-7);
+  line-height: 1.45;
+}
+
+.heroDateCard {
+  width: 100%;
+  max-width: 22rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid rgba(95, 88, 83, 0.14);
+  background: var(--mantine-color-linen-1);
+}
+
+.groupNames {
+  justify-content: center;
+}
+
+.stackAlign {
+  align-items: center;
+}
+
+.textAlign {
+  text-align: center;
+}
+
+@media (min-width: 62em) {
+  .groupNames {
+    justify-content: flex-start;
+  }
+
+  .stackAlign {
+    align-items: flex-start;
+  }
+
+  .textAlign {
+    text-align: left;
+  }
+
+  .heroDateCard {
+    max-width: 24rem;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.textBlock {
+  animation: fadeUp 0.9s ease both;
+}
+
+.imageBlock {
+  animation: fadeUp 1.1s ease 0.15s both;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.imageFrame::before {
+  content: '';
+  position: absolute;
+  inset: -12px -12px 12px 12px;
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid rgba(95, 88, 83, 0.18);
+  background: transparent;
+  z-index: 0;
+}
+
+.imageFrame::after {
+  content: '';
+  position: absolute;
+  inset: 12px 12px -12px -12px;
+  border-radius: var(--mantine-radius-lg);
+  background: var(--mantine-color-linen-2);
+  z-index: -1;
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: var(--mantine-radius-lg);
+  box-shadow: 0 24px 64px rgba(58, 79, 39, 0.18);
+}
+
+/* Countdown */
+.countdownGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 36rem;
+}
+
+@media (max-width: 47.99em) {
+  .countdownGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+  }
+}
+
+.countdownUnit {
+  padding: 1.25rem 0.75rem;
+  border-radius: var(--mantine-radius-md);
+  border: 1px solid var(--mantine-color-sage-2);
+  background: var(--mantine-color-linen-0);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (min-width: 48em) {
+  .countdownUnit {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.countdownUnit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(70, 98, 63, 0.12);
+}
+
+.countdownValue {
+  font-family: var(--mantine-font-family-headings);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--mantine-color-sage-7);
+}
+
+.countdownLabel {
+  margin-top: 0.35rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mantine-color-dimmed);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .textBlock,
+  .imageBlock {
+    animation: none;
+  }
+
+  .countdownUnit:hover {
+    transform: none;
+  }
+}
