@@ -7,21 +7,21 @@ import {
   Stack,
   Text,
   Title,
-} from '@mantine/core'
-import { IconHeart } from '@tabler/icons-react'
-import { useLanguage } from '../../../i18n/LanguageContext'
-import engagementImg from '../../../assets/engagement.jpeg'
+} from "@mantine/core";
+import { IconHeart } from "@tabler/icons-react";
+import { useLanguage } from "../../../i18n/LanguageContext";
+import engagementImg from "../../../assets/engagement.jpeg";
 import {
   formatWeekendRange,
   formatWeddingDate,
   formatWeddingTime,
-} from '../../../lib/dateUtils'
-import { WEDDING } from '../data/wedding'
-import { AddToCalendarButton } from './AddToCalendarButton'
-import classes from '../home.module.css'
+} from "../../../lib/dateUtils";
+import { WEDDING } from "../data/wedding";
+import { AddToCalendarButton } from "./AddToCalendarButton";
+import classes from "../home.module.css";
 
 export function SaveTheDateHero() {
-  const { locale, t } = useLanguage()
+  const { locale, t } = useLanguage();
 
   return (
     <Box className={classes.hero} component="section">
@@ -32,9 +32,12 @@ export function SaveTheDateHero() {
             order={{ base: 2, md: 1 }}
             className={classes.heroTextCol}
           >
-            <Stack gap="xl" className={`${classes.textBlock} ${classes.stackAlign}`}>
+            <Stack
+              gap="xl"
+              className={`${classes.textBlock} ${classes.stackAlign}`}
+            >
               <Stack gap={0} className={classes.heroIntro}>
-                <Text className={classes.heroEyebrow}>{t('saveTheDate')}</Text>
+                <Text className={classes.heroEyebrow}>{t("saveTheDate")}</Text>
 
                 <Group gap="sm" wrap="wrap" className={classes.groupNames}>
                   <Title
@@ -42,9 +45,9 @@ export function SaveTheDateHero() {
                     fw={500}
                     c="moss.8"
                     style={{
-                      fontSize: 'clamp(2.8rem, 8vw, 5rem)',
+                      fontSize: "clamp(2.8rem, 8vw, 5rem)",
                       lineHeight: 1.05,
-                      letterSpacing: '-0.02em',
+                      letterSpacing: "-0.02em",
                     }}
                   >
                     {WEDDING.partnerOne}
@@ -57,9 +60,9 @@ export function SaveTheDateHero() {
                     fw={500}
                     c="moss.8"
                     style={{
-                      fontSize: 'clamp(2.8rem, 8vw, 5rem)',
+                      fontSize: "clamp(2.8rem, 8vw, 5rem)",
                       lineHeight: 1.05,
-                      letterSpacing: '-0.02em',
+                      letterSpacing: "-0.02em",
                     }}
                   >
                     {WEDDING.partnerTwo}
@@ -73,21 +76,34 @@ export function SaveTheDateHero() {
                     tt="capitalize"
                     className={`${classes.heroDatePrimary} ${classes.textAlign}`}
                   >
-                    {formatWeekendRange(WEDDING.weekendStart, WEDDING.weekendEnd, locale)}
+                    {formatWeekendRange(
+                      WEDDING.weekendStart,
+                      WEDDING.weekendEnd,
+                      locale,
+                    )}
                   </Text>
-                  <Text className={`${classes.heroDateDetail} ${classes.textAlign}`}>
-                    {t('weddingWeekend')}
+                  <Text
+                    className={`${classes.heroDateDetail} ${classes.textAlign}`}
+                  >
+                    {t("weddingWeekend")}
                   </Text>
                 </Stack>
 
                 <Divider color="var(--mantine-color-linen-3)" my="md" />
 
                 <Stack gap={8} className={classes.stackAlign}>
-                  <Text tt="capitalize" className={`${classes.heroDateDetail} ${classes.textAlign}`}>
-                    {t('ceremony')} {formatWeddingDate(WEDDING.ceremonyDate, locale)}
+                  <Text
+                    tt="capitalize"
+                    className={`${classes.heroDateDetail} ${classes.textAlign}`}
+                  >
+                    {t("ceremony")}{" "}
+                    {formatWeddingDate(WEDDING.ceremonyDate, locale)}
                   </Text>
-                  <Text className={`${classes.heroDateDetailMuted} ${classes.textAlign}`}>
-                    {t('atTime')} {formatWeddingTime(WEDDING.ceremonyDate, locale)}
+                  <Text
+                    className={`${classes.heroDateDetailMuted} ${classes.textAlign}`}
+                  >
+                    {t("atTime")}{" "}
+                    {formatWeddingTime(WEDDING.ceremonyDate, locale)}
                   </Text>
                 </Stack>
               </Box>
@@ -107,7 +123,7 @@ export function SaveTheDateHero() {
               <Box
                 component="img"
                 src={engagementImg}
-                alt={t('imageAlt', {
+                alt={t("imageAlt", {
                   partnerOne: WEDDING.partnerOne,
                   partnerTwo: WEDDING.partnerTwo,
                 })}
@@ -118,5 +134,5 @@ export function SaveTheDateHero() {
         </Grid>
       </Container>
     </Box>
-  )
+  );
 }

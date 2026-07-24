@@ -17,6 +17,34 @@
   box-shadow: 0 6px 24px rgba(61, 76, 51, 0.08);
 }
 
+.flowerDivider {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 1.25rem 3.5rem;
+  background: var(--mantine-color-linen-1);
+  pointer-events: none;
+}
+
+.flowerDividerImage {
+  width: min(100%, 58rem);
+  height: auto;
+  display: block;
+  user-select: none;
+}
+
+@media (min-width: 48em) {
+  .flowerDivider {
+    padding: 1.5rem 1.5rem 4.5rem;
+  }
+
+  .flowerDividerImage {
+    width: min(100%, 72rem);
+  }
+}
+
 .infoSection {
   position: relative;
   padding: 0 0 5rem;
@@ -27,19 +55,25 @@
 .infoCardsOverlap {
   position: relative;
   z-index: 5;
-  transform: translateY(clamp(-2rem, -5vh, -1rem));
-  margin-bottom: clamp(-2rem, -5vh, -1rem);
+  transform: translateY(clamp(-2.75rem, -6vh, -1.75rem));
+  margin-bottom: clamp(-2.75rem, -6vh, -1.75rem);
 }
 
 @media (min-width: 48em) {
   .infoCardsOverlap {
-    transform: translateY(clamp(-4.5rem, -10vh, -3rem));
-    margin-bottom: clamp(-4.5rem, -10vh, -3rem);
+    transform: translateY(clamp(-4rem, -9vh, -2.75rem));
+    margin-bottom: clamp(-4rem, -9vh, -2.75rem);
   }
 }
 
+.infoCardCol {
+  display: flex;
+}
+
 .infoCard {
-  height: 100%;
+  flex: 1;
+  width: 100%;
+  min-height: 100%;
   border-radius: var(--mantine-radius-lg);
   border: 1px solid rgba(95, 88, 83, 0.12);
   background: rgba(252, 251, 248, 0.96);
@@ -94,10 +128,9 @@
 .hero {
   position: relative;
   z-index: 1;
-  min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: 5rem 0 4rem;
+  padding: 5rem 0 1.5rem;
   background: var(--mantine-color-linen-1);
 }
 
@@ -105,7 +138,7 @@
   .hero {
     align-items: flex-start;
     padding-top: 6.75rem;
-    padding-bottom: 6.5rem;
+    padding-bottom: 1rem;
   }
 
   .heroImageCol {
@@ -123,10 +156,6 @@
 
   .heroEyebrow {
     margin-bottom: 1rem;
-  }
-
-  .heroCalendarAction {
-    margin-bottom: 2rem;
   }
 }
 
